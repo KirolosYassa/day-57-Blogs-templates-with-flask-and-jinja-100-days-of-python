@@ -7,7 +7,7 @@
     <title>Blog Site</title>
   </head>
   <body>
-    {% for post in all_posts %} {% if post["id"] == id %}
+    {% for post in all_posts %} {% if post["id"] == blog_id %}
     <h1>{{post["title"]}}</h1>
     <h2>{{post["subtitle"]}}</h2>
     {% endif%} {% endfor %}

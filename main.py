@@ -16,14 +16,14 @@ def home():
     )
 
 
-@app.route("/blog/<id>")
-def get_blog(id):
+@app.route("/blog/<blog_id>")
+def get_blog(blog_id):
     url = f"https://api.npoint.io/c790b4d5cab58020d391"
     response = requests.get(url=url)
 
     all_posts = response.json()
 
-    return render_template("blog.html", all_posts=all_posts, id=int(id))
+    return render_template("blog.html", all_posts=all_posts, blog_id=int(blog_id))
 
 
 @app.route("/guess/<name>")
